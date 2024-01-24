@@ -5,6 +5,7 @@ fansPerGoal = 5;
 money = 0;
 hit = false;
 shielded = false;
+sprDir = 0;
 spd_clamp = 100;
 spdBoost = 1;
 spdBoostTime = 8;
@@ -14,5 +15,5 @@ alarmPause1 = -1;
 upgradesMenu = false;
 alarm_set(0,game_get_speed(gamespeed_fps)*5); // set money timer
 alarm_set(1,game_get_speed(gamespeed_fps)*3); // set fan decay timer
-
+sprite_index = playerIdleDown;
 depth = 0;

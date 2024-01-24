@@ -44,8 +44,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "playerSprite",
-    "path": "sprites/playerSprite/playerSprite.yy",
+    "name": "playerRunUp",
+    "path": "sprites/playerRunUp/playerRunUp.yy",
   },
   "spriteMaskId": null,
   "visible": true,
