@@ -18,6 +18,7 @@
   ],
   "ResourceOrderSettings": [
     {"name":"Path3","order":2,"path":"paths/Path3/Path3.yy",},
+    {"name":"cSans_speech","order":1,"path":"fonts/cSans_speech/cSans_speech.yy",},
     {"name":"playerRunDown","order":14,"path":"sprites/playerRunDown/playerRunDown.yy",},
     {"name":"goalPointer","order":8,"path":"objects/goalPointer/goalPointer.yy",},
     {"name":"wall","order":17,"path":"objects/wall/wall.yy",},
@@ -46,6 +47,7 @@
     {"name":"shieldUpgradeButton","order":23,"path":"objects/shieldUpgradeButton/shieldUpgradeButton.yy",},
     {"name":"playerRunRight","order":16,"path":"sprites/playerRunRight/playerRunRight.yy",},
     {"name":"shieldSprite","order":10,"path":"sprites/shieldSprite/shieldSprite.yy",},
+    {"name":"fanNpcSprite1","order":28,"path":"sprites/fanNpcSprite1/fanNpcSprite1.yy",},
     {"name":"buildingRoof","order":2,"path":"objects/buildingRoof/buildingRoof.yy",},
     {"name":"playerRunLeft","order":15,"path":"sprites/playerRunLeft/playerRunLeft.yy",},
     {"name":"Sprite5","order":4,"path":"sprites/Sprite5/Sprite5.yy",},
@@ -54,6 +56,7 @@
     {"name":"obstacle3","order":11,"path":"objects/obstacle3/obstacle3.yy",},
     {"name":"obstacle4","order":12,"path":"objects/obstacle4/obstacle4.yy",},
     {"name":"shield","order":19,"path":"objects/shield/shield.yy",},
+    {"name":"fanNpcSprite2","order":29,"path":"sprites/fanNpcSprite2/fanNpcSprite2.yy",},
     {"name":"spdUpgradeButton","order":15,"path":"objects/spdUpgradeButton/spdUpgradeButton.yy",},
     {"name":"garbage","order":18,"path":"objects/garbage/garbage.yy",},
     {"name":"playerIdleRight","order":20,"path":"sprites/playerIdleRight/playerIdleRight.yy",},
@@ -64,6 +67,7 @@
     {"name":"fanUpgradeButton","order":5,"path":"objects/fanUpgradeButton/fanUpgradeButton.yy",},
     {"name":"splatSprite","order":13,"path":"sprites/splatSprite/splatSprite.yy",},
     {"name":"npcSprite6","order":26,"path":"sprites/npcSprite6/npcSprite6.yy",},
+    {"name":"textboxSprite","order":30,"path":"sprites/textboxSprite/textboxSprite.yy",},
     {"name":"player","order":14,"path":"objects/player/player.yy",},
     {"name":"buttonParent","order":3,"path":"objects/buttonParent/buttonParent.yy",},
     {"name":"speedBoost","order":16,"path":"objects/speedBoost/speedBoost.yy",},
@@ -71,5 +75,6 @@
     {"name":"Sprite4","order":3,"path":"sprites/Sprite4/Sprite4.yy",},
     {"name":"playerIdleDown","order":18,"path":"sprites/playerIdleDown/playerIdleDown.yy",},
     {"name":"buildingFootprint","order":1,"path":"objects/buildingFootprint/buildingFootprint.yy",},
+    {"name":"Sprite29","order":26,"path":"sprites/Sprite29/Sprite29.yy",},
   ],
 }
