@@ -85,3 +85,32 @@ if(gameController.pausedEvent)
 		path_speed = 4;
 	}
 }
+
+xdif = x - previousX;
+ydif = y - previousY;
+
+if(abs(xdif) > 0)
+{
+	 if(sign(xdif) > 0)
+	 {
+		 image_index = 3;
+	 }
+	 else
+	 {
+		 image_index = 2;
+	 }
+}
+else
+{
+	if(sign(ydif) > 0)
+	 {
+		 image_index = 1;
+	 }
+	 else
+	 {
+		 image_index = 0;
+	 }
+}
+
+previousX = x;
+previousY = y;

@@ -22,8 +22,9 @@ function spawnLocationInit ()
 	return array;
 }
 
-function spawnLocation (dir)
+function spawnLocation (dir, spawnAttemptCount)
 {
+	var attempts = spawnAttemptCount;
 	switch(dir)
 	{
 		case 0:
@@ -59,11 +60,17 @@ function spawnLocation (dir)
 
 	array = [x,y];
 	
-	if(collision_rectangle(x-32,y-32,x+32,y+32,collisionObstacles,false,false) != noone)
+	if(collision_rectangle(x-32,y-32,x+32,y+32,collisionObstacles,false,false) != noone && attempts <= 10)
 	{
 		show_debug_message("NPC SPAWN COLLISION");
-		array = spawnLocation(dir);
+		attempts++;
+		array = spawnLocation(dir, attempts);
 	}
+	else if(attempts > 10)
+	{
+		array = [0,0];
+	}
+	
 	return array;
 }
 

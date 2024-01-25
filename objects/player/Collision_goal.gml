@@ -17,4 +17,6 @@ instance_destroy(other)
 
 goalInit = gameController.CreateGoal();
 
-instance_create_layer(goalInit[0], goalInit[1],"Instances",goal);
+var currentGoal = instance_create_layer(goalInit[0], goalInit[1],"Instances",goal);
+var currentGoalNPC = instance_create_layer(goalInit[0], goalInit[1],"Instances",goalNPC);
+currentGoalNPC.connectedGoal = currentGoal;

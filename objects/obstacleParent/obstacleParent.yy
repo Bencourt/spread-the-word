@@ -27,15 +27,18 @@
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsShapePoints": [
-    {"x":0.0,"y":0.0,},
-    {"x":64.0,"y":0.0,},
-    {"x":64.0,"y":64.0,},
-    {"x":0.0,"y":64.0,},
+    {"x":16.0,"y":16.0,},
+    {"x":112.0,"y":16.0,},
+    {"x":112.0,"y":112.0,},
+    {"x":16.0,"y":112.0,},
   ],
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "carSprite1",
+    "path": "sprites/carSprite1/carSprite1.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

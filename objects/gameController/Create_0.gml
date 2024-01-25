@@ -33,10 +33,20 @@ function CreateGoal ()
 {
 	x = random_range(64,room_width-128);
 	y = random_range(64,room_height-128);
+	minDistance = logn(2, player.fans+1) * 64;
+	if(minDistance < camera_get_view_width(view_camera[0])/2) 
+	{
+		minDistance = camera_get_view_width(view_camera[0])/2;
+	}
+	maxDistance = logn(2, player.fans+1) * 128;
+	if(maxDistance < camera_get_view_width(view_camera[0])/2+250) 
+	{
+		maxDistance = camera_get_view_width(view_camera[0])/2+250;
+	}
 	show_debug_message(string_concat("goal x ", x));
 	array = [x,y];
 	
-	if(collision_rectangle(x-32,y-32,x+32,y+32,buildingFootprint,false,false) != noone)
+	if(collision_rectangle(x-32,y-32,x+32,y+32,buildingFootprint,false,false) != noone || (distance_to_object(player) < minDistance || distance_to_object(player) > maxDistance))
 	{
 		show_debug_message("collision detected for goal");
 		array = CreateGoal();
@@ -45,4 +55,6 @@ function CreateGoal ()
 }
 goalInit = CreateGoal();
 
-instance_create_layer(goalInit[0], goalInit[1],"Instances",goal);
+var currentGoal = instance_create_layer(goalInit[0], goalInit[1],"Instances",goal);
+var currentGoalNPC = instance_create_layer(goalInit[0], goalInit[1],"Instances",goalNPC);
+currentGoalNPC.connectedGoal = currentGoal;

@@ -16,3 +16,15 @@ if(upgradesMenu)
 	draw_set_halign(fa_center);
 	draw_text(room_width/2, 64, "Upgrades Menu");
 }
+
+if(!gameController.paused)
+{
+	if(teleported)
+	{
+		transitionFrame++;
+		frame = floor((14/30) * transitionFrame);
+		xScale = window_get_width() / 109; 
+		yScale = (window_get_height()-32) / 64;
+		draw_sprite_ext(trainTransitionSprite, frame, 0, 28, xScale, yScale, 0, c_white, 1);
+	}
+}
