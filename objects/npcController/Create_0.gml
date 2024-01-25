@@ -3,7 +3,9 @@
 
 maxNPCs = 10;
 currentNPCS = [];
-collisionObstacles = [buildingFootprint, obstacleParent, wall, player];
+collisionObstacles = [buildingFootprint, obstacleParent, garbage, player];
+spawnLayer = layer_get_id("npcSpawnTileMap");
+spawnMap = layer_tilemap_get_id(spawnLayer);
 
 show_debug_message(camera_get_view_height(view_camera[0])/2);
 show_debug_message(camera_get_view_width(view_camera[0])/2);
@@ -14,7 +16,7 @@ function spawnLocationInit ()
 	y = random_range(player.y - camera_get_view_height(view_camera[0])/2, player.y + camera_get_view_height(view_camera[0])/2);
 	array = [x,y];
 	
-	if(collision_rectangle(x-32,y-32,x+32,y+32,collisionObstacles,false,false) != noone)
+	if(collision_rectangle(x-32,y-32,x+32,y+32,collisionObstacles,false,false) != noone || tilemap_get_at_pixel(spawnMap, x, y) != 0)
 	{
 		show_debug_message("NPC SPAWN COLLISION");
 		array = spawnLocationInit();
@@ -60,7 +62,7 @@ function spawnLocation (dir, spawnAttemptCount)
 
 	array = [x,y];
 	
-	if(collision_rectangle(x-32,y-32,x+32,y+32,collisionObstacles,false,false) != noone && attempts <= 10)
+	if((collision_rectangle(x-32,y-32,x+32,y+32,collisionObstacles,false,false) != noone  || tilemap_get_at_pixel(spawnMap, x, y) != 0)&& attempts <= 10)
 	{
 		show_debug_message("NPC SPAWN COLLISION");
 		attempts++;

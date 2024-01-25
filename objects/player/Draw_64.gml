@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+//in game ui
 draw_set_colour(c_black);
 draw_set_font(cSans);
 draw_text(64, 64, string_concat("Fans: ", fans));
 draw_text(64, 96, string_concat("Money: $", money,".00"));
 
+//upgrades menu ui
 if(upgradesMenu)
 {
 	draw_set_color(c_gray);
@@ -17,6 +20,7 @@ if(upgradesMenu)
 	draw_text(room_width/2, 64, "Upgrades Menu");
 }
 
+//train transition ui
 if(!gameController.paused)
 {
 	if(teleported)
